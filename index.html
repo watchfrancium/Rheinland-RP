@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Dispatch City</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gl"></canvas>
+    <div id="hud" class="hide">
+        <div id="pcard" class="glass">
+            <div id="pname"></div>
+            <div id="pjob"></div>
+            <div id="cash"></div>
+            <div id="rep"><div id="repf"></div></div>
+        </div>
+        <div id="limit" class="glass hide"><small>SPEED LIMIT</small><b>--</b></div>
+        <canvas id="mini" width="256" height="256"></canvas>
+        <div id="obj" class="glass"></div>
+        <div id="toast" class="glass"></div>
+        <div id="prog"><div id="progf"></div></div>
+        <div id="joy" class="p"><div id="knob"></div></div>
+        <div id="dock" class="p">
+            <div id="row">
+                <button id="bSiren" class="rb s0" style="display:none">
+                    <svg viewBox="0 0 32 32"><path d="M8 22v-5a8 8 0 0 1 16 0v5z"/><path d="M5 26h22"/><path class="ray" d="M16 3v3M5.5 8l2.2 2.2M26.5 8l-2.2 2.2M2 16h3M27 16h3"/></svg>
+                </button>
+                <button id="bJump" class="rb">JUMP</button>
+                <button id="bMenu" class="rb">MENU</button>
+            </div>
+            <button id="bAction" disabled>USE</button>
+        </div>
+    </div>
+    
+    <div id="title">
+        <h1>DISPATCH CITY</h1>
+        <div class="tag">Port Harrow · Live the job · Run the streets</div>
+        <button id="bPlay" class="big">PLAY</button>
+        <button id="bNew" class="btn hide" style="margin-top:14px">New character</button>
+    </div>
+
+    <div id="creator" class="hide">
+        <div class="glass">
+            <h1 style="margin:0 0 8px;font-size:21px">Create your character</h1>
+            <input id="nm" maxlength="16" placeholder="Your name">
+            <div class="sws" id="sws"></div>
+            <button id="bStart" class="btn pri full">Start</button>
+        </div>
+    </div>
+
+    <div id="overlay" class="hide"><div id="sheet" class="glass"></div></div>
+    <div id="rotate">Turn your phone sideways to play.</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
